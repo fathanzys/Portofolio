@@ -7,19 +7,26 @@
 
 /* Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(135deg, #6e7bff, #b98eff); /* Gradasi warna */
+  background: linear-gradient(135deg, #6e7bff, #b98eff, #55328d, #291746, #0c0714);
   color: #fff;
   padding: 0;
   margin: 0;
+  text-align: center; 
 }
 
 /* Header */
 header {
-  background: rgba(0, 0, 0, 0.5); /* Transparan hitam */
-  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 80px 20px;
   text-align: center;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .header-container {
@@ -27,46 +34,71 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-width: 960px; /* Membatasi lebar konten */
+  margin: 0 auto;
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border: 6px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
 
 h1 {
-  font-size: 2.5em;
-  margin: 0.5em 0;
+  font-size: 3.5em;
+  margin: 15px 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 p {
-  font-size: 1.2em;
-  margin: 0.5em 0;
+  font-size: 1.6em;
+  margin: 15px 0;
   color: #f3f3f3;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 /* Section */
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 80px 20px;
+  max-width: 1000px;
   margin: 0 auto;
+  animation: fadeIn 1s ease-out;
 }
 
 h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 3em;
+  margin-bottom: 40px;
   color: #fff;
   text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.8;
 }
 
 /* About */
 #about p {
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-align: center;
   color: #f3f3f3;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  opacity: 0.9;
+  padding-bottom: 30px;
 }
 
 /* Skills */
@@ -76,54 +108,166 @@ h2 {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 #skills li {
   background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 1.1em;
+  padding: 25px;
+  border-radius: 12px;
+  font-size: 1.3em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#skills li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
 /* Projects */
 #projects .project {
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .project h3 {
-  font-size: 1.8em;
-  margin-bottom: 10px;
+  font-size: 2.3em;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  display: inline-block; /* Membuat h3 bersifat inline agar underline lebih mudah diterapkan */
+  position: relative;
 }
 
-/* Contact */
+.project:hover {
+  transform: scale(1.05); /* Zoom effect saat hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Shadow lebih kuat saat hover */
+  background: rgba(255, 255, 255, 0.15); /* Background lebih terang saat hover */
+}
+
+.project h3::after {
+  content: ''; 
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #b98eff; /* Warna garis bawah */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out; /* Animasi garis bawah */
+}
+
+.project:hover h3::after {
+  transform: scaleX(1); /* Garis bawah muncul secara perlahan saat hover */
+  transform-origin: bottom left;
+}
+
 #contact p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
+  font-size: 1.5em;
+  margin-bottom: 15px;
   text-align: center;
+  color: #f3f3f3;
 }
 
 #contact a {
   color: #b98eff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 #contact a:hover {
   text-decoration: underline;
+  color: #fff;
 }
 
 /* Footer */
 footer {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 40px;
+  box-shadow: 0px -6px 20px rgba(0, 0, 0, 0.7);
 }
 
 footer p {
-  font-size: 1em;
+  font-size: 1.4em;
   color: #f3f3f3;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 30px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2.8em;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #projects .project {
+    padding: 20px;
+  }
+
+  footer p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  #skills ul {
+    grid-template-columns: 1fr;
+  }
+
+  #projects .project {
+    padding: 15px;
+  }
+
+  footer p {
+    font-size: 1em;
+  }
 }
