@@ -9,20 +9,31 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <img src="/assets/Fathan-NoBG.png" alt="Foto Fathan" class="profile-img">
-            <h1>Fathan Nabil Arrazani</h1>
-            <p>Data Science & AI/ML Enthusiast | Web Developer | UI/UX Designer</p>
-        </div>
-    </header>
+        <nav class="navbar">
+            <div class="logo">Hannpage.</div>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#skills">Proyek</a></li>
+                <li><a href="#projects">Skills</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>      
     
     <section id="about">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah mahasiswa Informatika di UAI dengan lebih dari 2,5 tahun pengalaman dalam analisis data, pengembangan web, UI/UX, dan manajemen proyek.</p>
-    </section>
+        <div class="about-container">
+            <img src="/assets/Fathan-NoBG.png" alt="Foto Fathan" class="about-img">
+            <div class="about-text">
+                <h2>Tentang Saya</h2>
+                <p>Perkenalkan, saya Fathan Nabil Arrazani!
+                    Saya adalah mahasiswa Informatika di Universitas Al Azhar Indonesia (UAI) dengan lebih dari 2,5 tahun pengalaman dalam analisis data, pengembangan web, UI/UX, dan manajemen proyek.
+                    Saya memiliki minat besar di bidang Data Science, Saya percaya bahwa teknologi dapat memberikan dampak besar bagi masyarakat, itulah mengapa saya tertarik untuk mengembangkan solusi berbasis data dan AI yang dapat membantu dalam pengambilan keputusan, meningkatkan efisiensi, serta memberikan wawasan yang lebih dalam.</p>
+            </div>
+        </div>
+    </section>    
     
     <section id="skills">
-        <h2>Keterampilan</h2>
+        <h2>Proyek</h2>
         <ul>
             <li><a href="/data/dataanalysis.html">Data Analysis & Visualization</a></li>
             <li><a href="/data/aiml.html">Machine Learning & AI</a></li>
@@ -34,19 +45,42 @@
     </section>
     
     <section id="projects">
-        <h2>Proyek</h2>
+        <h2>Skills</h2>
         <div class="project">
-            <h3>Deteksi Deepfake di Media Sosial</h3>
-            <p>Menggunakan preprocessing gambar untuk mendeteksi deepfake.</p>
+            <div class="project-text">
+                <h3>Data Analysis</h3>
+            </div>
+            <div class="project-images">
+                <img src="/assets/icon-data/mysql.png" alt="Data Image 1">
+                <img src="/assets/icon-data/powerbi.png" alt="Data Image 2">
+                <img src="/assets/icon-data/py.png" alt="Data Image 3">
+                <img src="/assets/icon-data/r.png" alt="Data Image 4">
+            </div>
         </div>
+        
         <div class="project">
-            <h3>Sistem Berbagi File Aman</h3>
-            <p>Menggunakan kriptografi hybrid AES dan RSA.</p>
+            <div class="project-images">
+                <div class="project-text">
+                    <h3>UI/UX</h3>
+                </div>
+                <img src="/assets/icon-uiux/canva.jpg" alt="UIUX Image 1">
+                <img src="/assets/icon-uiux/figma.png" alt="UIUX Image 2">
+            </div>
         </div>
+        
         <div class="project">
-            <h3>CurhatHub</h3>
-            <p>Startup sosial berbasis teknologi untuk konsultasi.</p>
+            <div class="project-images">
+                <div class="project-text">
+                    <h3>Web Development</h3>
+                </div>
+                <img src="/assets/icon-webdev/css.png" alt="Web Image 1">
+                <img src="/assets/icon-webdev/html.png" alt="Web Image 2">
+                <img src="/assets/icon-webdev/php.png" alt="Web Image 3">
+                <img src="/assets/icon-webdev/javascript.png" alt="Web Image 4">
+                <img src="/assets/icon-webdev/github.png" alt="Web Image 4">
+            </div>
         </div>
+        
     </section>
     
     <section id="contact">
